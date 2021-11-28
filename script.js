@@ -33,10 +33,32 @@ btnRoll.addEventListener("click", function () {
   const dice = Math.trunc(Math.random() * 6) + 1;
   if (play) {
     console.log(dice);
-    //2. Display dice(img as the random number)
-    diceEl.classList.remove("hidden");
-    diceEl.src = `./images/dice-${dice}.png`;
-
+    switch (dice) {
+      case 1:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/GfwcxJv/dice-1.png`;
+        break;
+      case 2:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/GfwcxJv/dice-1.png`;
+        break;
+      case 3:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/bJ0Rqpp/dice-3.png`;
+        break;
+      case 4:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/tcx0RBd/dice-4.png`;
+        break;
+      case 5:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/x5Gcs00/dice-5.png`;
+        break;
+      case 6:
+        diceEl.classList.remove("hidden");
+        diceEl.src = `https://i.ibb.co/6gb9XcH/dice-6.png`;
+    }
+    //
     // check for rolled 1
     if (dice !== 1) {
       //add dice to current score
