@@ -27,8 +27,8 @@ let currnetScore = 0;
 let activePlayer = 0;
 const scores = [0, 0];
 let play = true;
-// Rolling the functionality
-btnRoll.addEventListener("click", function () {
+
+function rollDice() {
   //1. Generating a random dice roll
   const dice = Math.trunc(Math.random() * 6) + 1;
   if (play) {
@@ -69,7 +69,10 @@ btnRoll.addEventListener("click", function () {
       switchPlayer();
     }
   }
-});
+}
+
+// Rolling the functionality
+btnRoll.addEventListener("click", rollDice);
 
 // Holding current score :
 
@@ -92,6 +95,7 @@ btnHold.addEventListener("click", function () {
     } else {
       //switch Player
       switchPlayer();
+      rollDice();
     }
   }
 });
